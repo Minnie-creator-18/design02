@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Eb+Garamond:wght@400;500;700&amp;family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e2e3d9", surface: "#f9faf0", "primary-fixed": "#bef199", "on-tertiary-fixed-variant": "#494900", primary: "#3c661f", "error-container": "#ffdad6", error: "#ba1a1a", "on-background": "#1a1c16", "tertiary-fixed": "#e8e883", "on-secondary-fixed-variant": "#004d62", "primary-container": "#548036", "tertiary-fixed-dim": "#cbcb6a", "outline-variant": "#c3c9b8", "on-primary": "#ffffff", "surface-container-low": "#f3f5ea", "on-error-container": "#93000a", "secondary-container": "#9ae1ff", "inverse-on-surface": "#f0f2e7", "surface-bright": "#f9faf0", "on-secondary": "#ffffff", "on-tertiary-fixed": "#1d1d00", "on-tertiary-container": "#fffbff", "on-primary-fixed": "#0a2100", "inverse-surface": "#2e312b", "on-surface": "#1a1c16", secondary: "#0c6780", "surface-container": "#edefe5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#a3d480", "secondary-fixed-dim": "#89d0ed", "on-secondary-fixed": "#001f29", background: "#f9faf0", outline: "#73796b", tertiary: "#5f5f04", "secondary-fixed": "#baeaff", "on-error": "#ffffff", "surface-dim": "#d9dbd1", "on-secondary-container": "#09657f", "surface-container-high": "#e7e9df", "surface-container-lowest": "#ffffff", "inverse-primary": "#a3d480", "on-surface-variant": "#43493c", "tertiary-container": "#787820", "on-primary-fixed-variant": "#27500a", "on-primary-container": "#f9ffed", "surface-container-highest": "#e2e3d9", "surface-tint": "#3e6922"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {unit: "8px", gutter: "24px", "container-max": "1200px", "margin-mobile": "16px", "margin-desktop": "64px"}, fontFamily: {"label-md": ["Montserrat"], "label-sm": ["Montserrat"], "body-lg": ["Montserrat"], "headline-md": ["EB Garamond"], "body-md": ["Montserrat"], "headline-lg-mobile": ["EB Garamond"], display: ["Eb Garamond"], "headline-lg": ["EB Garamond"], headline: ["Eb Garamond"], body: ["Montserrat"], label: ["Montserrat"]}, fontSize: {"label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600"}], "label-sm": ["12px", {lineHeight: "1.2", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "1.7", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "headline-lg-mobile": ["28px", {lineHeight: "1.2", fontWeight: "500"}], display: ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "500"}]}}}};</script>
+<style>body {
+    background-color: #f9faf0;
+    background-image: radial-gradient(#e2e3d9 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    background-attachment: fixed
+    }
+.paper-texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 9999;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBCnDxGK6uGsj28p4S4yvZbn3627CaDhnn9VsBOEdBqENeP7APciW2J4tvGVyfrlM224wJiGNZ6i3Ntq_uDZZRG1M0sOqjm78cen0EnSqxqY2OPpYiFDqgduiXW2_RtvsNtlKTeSyczlx599wBFxqk4i0Syz9gPbcHIL4IremDEE0V2JTDVR7-vhCnWLbUyd8vMsmRPtzoM2Rd4nOP2wCtcQlPBBWj2ZHw_rOUA33k9SrnWV2NL3Q1bXK4c97pOjI7XTyGYyWhAr4SH)
+    }
+.soft-card-shadow {
+    box-shadow: 0 10px 40px -10px rgba(60, 103, 30, 0.1)
+    }
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(60, 103, 30, 0.2);
+    transform: translatey(-4px)
+    }</style>
+</head>
+<body class="text-on-surface font-body-md overflow-x-hidden">
+<div class="paper-texture"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-semibold text-primary dark:text-primary-fixed">
+                Studio Magic
+            </div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Home</a>
+<a class="text-label-md font-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary-container dark:border-primary-fixed pb-1" href="#">Works</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Aesthetic</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-16 text-center">
+<h1 class="font-display text-display text-primary mb-4">Our Stories</h1>
+<p class="max-w-2xl mx-auto text-body-lg text-on-surface-variant font-body-lg">
+                Step into the quiet corners of our imagination, where hand-painted landscapes meet the gentle hum of forgotten tales. Each piece is a fragment of a world waiting to breathe.
+            </p>
+</header>
+<!-- Gallery Grid (Bento/Asymmetric Mix) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Card -->
+<div class="md:col-span-8 group">
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden soft-card-shadow transition-all duration-500 hover-glow">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img alt="霍爾的移動城堡" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A Ghibli-inspired hand-painted gouache illustration of Howl's Moving Castle, a whimsical and complex steampunk castle walking through a misty, flower-filled mountain meadow, soft steam rising, vibrant colors, magical and cozy atmosphere." src="https://lh3.googleusercontent.com/aida/ADBb0uhaoRODqElFShCbADYtQ1Yom2-G83VR5ImK7KR3arCGGVhNNCa4JO1v4TLouo-RnCLSqxn74eKf43hLvHOcuD_zy_Km_8QBUFkdfDe5u9tQQApOvm8ecNUVr1LGUvTdCNHZ_BF37LwdwkZb2zySmKO1E1l-3Givo58PC3j4YBq-GPFxFZfjCIqaFmG1b_PJfyKgUFEd2_bFkj00KdLs623NTChMe0eyXCNtUQdIfrQETsuohLFos25WXTM"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-label-sm font-label-sm rounded-full">Legend</span>
+<span class="text-label-sm text-outline">Summer 2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-3">霍爾的移動城堡</h2>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">一座在花海中漫步、充滿蒸汽龐克美學與魔法氣息的移動之家。</p>
+</div>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="md:col-span-4 group">
+<div class="h-full bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden soft-card-shadow transition-all duration-500 hover-glow">
+<div class="aspect-square w-full overflow-hidden">
+<img alt="Windy Hill" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A whimsical hand-painted illustration of a solitary windmill on a windy hill under a dramatic sky of swirling pastel blue and soft yellow clouds. The style mimics tactile ceramic tile painting with visible brushstrokes and a soft parchment texture. The scene is illuminated by the golden hour light, creating a nostalgic and safe atmosphere typical of slow-living narratives." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOKgBJjXLIE6jrjSrDWe0cXDODsYPHIEG0YSjP9DW84Z4iJvJiwY9JVqXNHoESOIYPiMp2vS8sDsoYAx9UyeAL-9HrNg58qEB7arKDygDY1KpQpElmqLKB61-YB_XSKenyP70Fy_0JuMCGbggK2RUL21uZtUtBNrI_7WuzQDKrI579wisiNWb_tMLoXAb4e22JPKqaWFfqc7bJPf2fHgx1lw0Qme8N6AkzI7JKqYGTUmzXrMu6rNz34x_WZzWDu2yVYx9CwUF3_0hh"/>
+</div>
+<div class="p-6">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Windy Hill</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                            A study of movement and invisible forces. Capturing the dance of golden wheat in the afternoon breeze.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="md:col-span-4 group">
+<div class="h-full bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden soft-card-shadow transition-all duration-500 hover-glow">
+<div class="aspect-square w-full overflow-hidden">
+<img alt="Paper Echoes" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cozy, hand-drawn interior of a cluttered magical library filled with ancient leather-bound books and floating ceramic lamps. The room is bathed in warm, candle-like light that highlights the tactile textures of parchment paper and polished wood. The overall mood is one of safety and intellectual curiosity, utilizing a rich palette of earthy browns and soft yellows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5oa7p49A8cFuSlrM4rta-c-rC3SN-9mF519NvInuudITCdV6fYGxDVVvjhWUSlmVZJ6EmznzdnlJiFkRnY9mpHyUd2aKyeDKWAg3MEiipZGMtu9ZLdijxNV0J2mnpcltTCipRGYYGBone7rvarI0QOYXhv-q43fp4gerRb511Anl-IsRDzqumRSQl66KsvWWcKGBwfQFdhpqsDQpX7tqum381P9h14lOCprHkDIyX_j-0GNupD68YILmZiQ3MD9BceomtN_o3EOUH"/>
+</div>
+<div class="p-6">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Paper Echoes</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                            Every book tells two stories: the one written on its pages and the one left in the dust of the shelves.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Medium Wide Card -->
+<div class="md:col-span-8 group">
+<div class="h-full bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden soft-card-shadow transition-all duration-500 hover-glow flex flex-col md:flex-row">
+<div class="md:w-1/2 overflow-hidden">
+<img alt="The Silent Garden" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist digital painting of a single blooming cherry blossom branch against a vast, airy cream background, representing the Japanese philosophy of Ma or negative space. The lighting is bright and high-key, creating a serene and modern atmosphere. The colors are limited to soft pinks, deep browns, and the creamy white of the background, emphasizing craftsmanship and quiet joy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkHoj9cVKvMPONAmSof_aCt37tmdWFqNmqCLXnOb8Wbp2IenIsxW5SA2a3UjLjmgLKtl821v8sIDb7-M9oudnm3Ip9XqdwigKoxW7UV06zefNqVN8gh3UPdc-en88H9ud_ptjqj472WpBxxyMzIJtv7kXONbKuAoE6emmYkn1u5X2ECCOlaxIyWIdzMQeRPmdIFMdQUyIQnPG2BLs8ecXOQxuvJKYxISUbr39kRMXohVaD-gMA0Hncf2idjVUU8q1SMJX7-fESHnCR"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<div class="mb-2">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm rounded-full">In Progress</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">The Silent Garden</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">一座在花海中漫步、充滿蒸汽龐克美學與魔法氣息的移動之家。</p>
+<button class="w-fit px-6 py-2 bg-primary text-on-primary font-label-md text-label-md rounded-full hover:shadow-[0_0_15px_rgba(60,103,30,0.4)] transition-all active:scale-95">
+                            View Series
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-20 flex flex-col items-center">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[1px] w-12 bg-outline-variant"></div>
+<span class="text-label-sm font-label-sm text-outline">End of Archive</span>
+<div class="h-[1px] w-12 bg-outline-variant"></div>
+</div>
+<button class="group flex items-center gap-2 text-primary font-label-md text-label-md hover:underline underline-offset-8 transition-all">
+                Discover More Tales
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest w-full rounded-t-xl">
+<div class="flex flex-col md:flex-row justify-between items-center gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed">Studio Magic</div>
+<div class="text-body-md font-body-md text-tertiary dark:text-tertiary-fixed-dim">© 2024 Hand-Drawn Tales. Crafted with Ma.</div>
+</div>
+<div class="flex gap-8">
+<a class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all hover:underline underline-offset-4" href="#">Philosophy</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all hover:underline underline-offset-4" href="#">Studio</a>
+<a class="text-label-sm font-label-sm text-primary dark:text-primary-fixed-dim font-bold hover:text-secondary dark:hover:text-secondary-fixed transition-all hover:underline underline-offset-4" href="#">Archive</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">brush</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">park</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>

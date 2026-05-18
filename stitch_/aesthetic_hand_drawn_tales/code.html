@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Eb+Garamond:wght@400;500;700&amp;family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e2e3d9", surface: "#f9faf0", "primary-fixed": "#bef199", "on-tertiary-fixed-variant": "#494900", primary: "#3c661f", "error-container": "#ffdad6", error: "#ba1a1a", "on-background": "#1a1c16", "tertiary-fixed": "#e8e883", "on-secondary-fixed-variant": "#004d62", "primary-container": "#548036", "tertiary-fixed-dim": "#cbcb6a", "outline-variant": "#c3c9b8", "on-primary": "#ffffff", "surface-container-low": "#f3f5ea", "on-error-container": "#93000a", "secondary-container": "#9ae1ff", "inverse-on-surface": "#f0f2e7", "surface-bright": "#f9faf0", "on-secondary": "#ffffff", "on-tertiary-fixed": "#1d1d00", "on-tertiary-container": "#fffbff", "on-primary-fixed": "#0a2100", "inverse-surface": "#2e312b", "on-surface": "#1a1c16", secondary: "#0c6780", "surface-container": "#edefe5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#a3d480", "secondary-fixed-dim": "#89d0ed", "on-secondary-fixed": "#001f29", background: "#f9faf0", outline: "#73796b", tertiary: "#5f5f04", "secondary-fixed": "#baeaff", "on-error": "#ffffff", "surface-dim": "#d9dbd1", "on-secondary-container": "#09657f", "surface-container-high": "#e7e9df", "surface-container-lowest": "#ffffff", "inverse-primary": "#a3d480", "on-surface-variant": "#43493c", "tertiary-container": "#787820", "on-primary-fixed-variant": "#27500a", "on-primary-container": "#f9ffed", "surface-container-highest": "#e2e3d9", "surface-tint": "#3e6922"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {unit: "8px", gutter: "24px", "container-max": "1200px", "margin-mobile": "16px", "margin-desktop": "64px"}, fontFamily: {"label-md": ["Montserrat"], "label-sm": ["Montserrat"], "body-lg": ["Montserrat"], "headline-md": ["EB Garamond"], "body-md": ["Montserrat"], "headline-lg-mobile": ["EB Garamond"], display: ["Eb Garamond"], "headline-lg": ["EB Garamond"], headline: ["Eb Garamond"], body: ["Montserrat"], label: ["Montserrat"]}, fontSize: {"label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600"}], "label-sm": ["12px", {lineHeight: "1.2", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "1.7", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "headline-lg-mobile": ["28px", {lineHeight: "1.2", fontWeight: "500"}], display: ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "500"}]}}}};</script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuD697OhsmkhAnH5B5E6rWtXGu8pXG6SQNhONOqVggMY_YFPR0nANUfBHOsOGfnn-6T20BMP30M01DBunGo0FhCQYHr5A4H6M07twfLsJeoolBF_e_HfCR9kMgmN6qW8dG3U63Luc6P3q7zrReyjUfKUC5t1UVZcfv5FL37wS0rK-Jrmp5wGSlV_9JBWSZCriSJwkN6T7yFF9qPkurxS0qHT4X_NVxlsjEgDcb5K7R8wiKJeM8c3bo0nRa0CGgjPjof65PD0_FGjOOmu)
+    }
+.watercolor-shadow {
+    box-shadow: 0 20px 40px -15px rgba(60, 103, 30, 0.1)
+    }
+.asymmetric-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="grain-overlay"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<span class="text-headline-md font-headline-md font-semibold text-primary dark:text-primary-fixed">Studio Magic</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Works</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary-container dark:border-primary-fixed pb-1 font-label-md text-label-md" href="#">Aesthetic</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary"><span class="material-symbols-outlined" data-icon="menu">menu</span></button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<header class="mb-24">
+<h1 class="text-display font-display text-primary leading-tight mb-8">The Alchemy of <br/><span class="italic text-tertiary">Painted Light</span></h1>
+<div class="md:flex gap-gutter items-end">
+<div class="md:w-7/12">
+<img alt="" class="w-full h-[500px] object-cover rounded-xl watercolor-shadow border border-surface-container" data-alt="A sprawling hand-painted landscape in the Ghibli style, featuring rolling emerald green hills, a soft cerulean blue sky with towering cumulus clouds, and a small rustic cottage nestled in a valley. The lighting is reminiscent of a warm golden hour, with soft, diffused shadows and a tactile gouache texture that shows delicate brushstrokes. The palette is dominated by earthy greens, ochres, and vibrant blues, creating a sense of nostalgic serenity and environmental harmony." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSwbqrFazbDM8zjeMgBOTVe2zx0Z8Vdw6DeCu_x2x_kpk93M5f3MuDNuvGMIsWvHnykGwFy8OLsJ5IcmKI7mMpwksmD6cz1kcd7wQz1IL3Z0oB882zahO0aYTx9ZPHdT69tLSfdhj0zOAqmWNLk3plWcRbPOF0aqqUwdUfmDFVM0i2J0JQTWyM_5KB1YeIoGN6RY1F1M-0-0qikIdKb9w6hOyIC237ZaY-VT3sFTwPbXWtR62sIo_FWMUdDRDCm4B2B8dxqtdZoaQq"/>
+</div>
+<div class="md:w-5/12 mt-8 md:mt-0">
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+                        In the heart of traditional animation lies a secret medium: gouache. Unlike the transparency of watercolor, gouache offers a heavy, opaque dreamscape—a world where light is built layer by layer, stroke by stroke.
+                    </p>
+</div>
+</div>
+</header>
+<!-- Aesthetic Bento Grid -->
+<section class="asymmetric-grid mb-32">
+<!-- Large Focus Block -->
+<div class="col-span-12 md:col-span-8 bg-surface-container-low rounded-xl p-8 border border-surface-variant watercolor-shadow">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-6">The "Ma" of Composition</h2>
+<div class="md:grid grid-cols-2 gap-8">
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        "Ma" is the Japanese concept of negative space, or the "gap." In our studio, we treat the empty canvas not as a void, but as a breath. It is the silence between notes that makes the music.
+                    </p>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        In background painting, this manifests as vast skies and quiet corners where the eye can rest, allowing the narrative to breathe through the environment itself.
+                    </p>
+</div>
+</div>
+<!-- Color Palette Block -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-4">
+<div class="h-1/3 bg-primary-fixed-dim rounded-lg flex items-center justify-center border border-primary-container/20">
+<span class="font-label-sm text-label-sm text-on-primary-fixed">Moss &amp; Meadow</span>
+</div>
+<div class="h-1/3 bg-secondary-fixed-dim rounded-lg flex items-center justify-center border border-secondary-container/20">
+<span class="font-label-sm text-label-sm text-on-secondary-fixed">Summer Welkin</span>
+</div>
+<div class="h-1/3 bg-tertiary-fixed-dim rounded-lg flex items-center justify-center border border-tertiary-container/20">
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed">Harvest Ochre</span>
+</div>
+</div>
+<!-- Detail Image -->
+<div class="col-span-12 md:col-span-5 mt-8">
+<img alt="" class="w-full aspect-square object-cover rounded-xl border border-surface-variant" data-alt="A close-up shot of hand-painted gouache textures on thick cold-press paper. The image shows the rich, chalky consistency of the paint with visible, intentional brush marks in shades of deep forest green, muted sage, and warm mustard yellow. Subtle paper grain is visible through the thinner layers of paint, emphasizing the tactile, artisan nature of the medium. The lighting is soft and top-down, highlighting the slight physical relief of the pigment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0yj9thKfGVlC49glPBLRnJ3-C_Lp8EBso1MFB7ZT3NuNDpx3MsEr6Oh0tnnZA3wxBb77usW8t_CnF4IuqBfRZD6qxQyzLMmZixjQ7fJ_4BPCgYgG68bYiXhRiJvTQicdVLcwhSm5W06ZAyujow2EAExE9lXPDiWYxrslP9YCl5l8VEqltLPsSL25xVz6e-rPxYf5MhzyAomUi9sdrhv8dasyi8XmXqGAFdmquFnot_3WdMsUDOcAmFAVYC28G4hK7SY9DjUPDZdIA"/>
+</div>
+<!-- Detailed Text Block -->
+<div class="col-span-12 md:col-span-7 mt-8 flex flex-col justify-center">
+<h3 class="text-headline-md font-headline-md text-secondary mb-4 italic">The Gouache Technique</h3>
+<div class="space-y-4 text-body-md font-body-md text-on-surface">
+<p>
+                        Traditional animation backgrounds are predominantly painted with Nicker Gouache, a high-pigment professional paint from Japan. It is prized for its ability to produce rich, saturated colors that remain matte when dry.
+                    </p>
+<p>
+                        Artists begin with a light pencil sketch, often on large sheets of paper. The process involves 'blocking in' the largest shapes first—the sky, the mountains, the ground—before layering finer details. Because gouache can be reworked even after drying, artists can blend colors directly on the paper to create soft atmospheric gradients.
+                    </p>
+<ul class="space-y-2 mt-4">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="fiber_manual_record">fiber_manual_record</span>
+<span>Layering light over dark for vibrant highlights.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="fiber_manual_record">fiber_manual_record</span>
+<span>Wet-on-wet blending for misty morning horizons.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="fiber_manual_record">fiber_manual_record</span>
+<span>Dry brushing for the rough bark of ancient trees.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Quote Section -->
+<section class="max-w-3xl mx-auto text-center py-24 border-t border-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-6" data-icon="format_quote">format_quote</span>
+<p class="text-headline-lg font-headline-lg italic text-on-surface-variant mb-6">
+                "We don't just paint scenery; we paint the feeling of a place. A background should feel like a memory you almost forgot."
+            </p>
+<cite class="font-label-md text-label-md text-primary uppercase tracking-widest">— The Master's Journal</cite>
+</section>
+<!-- Gallery Teaser -->
+<section class="flex flex-wrap gap-gutter">
+<div class="flex-1 min-w-[300px]">
+<img alt="" class="w-full h-64 object-cover rounded-xl watercolor-shadow" data-alt="A warm, sunlit artist's studio filled with wooden shelves, jars of colorful pigments, and worn brushes in ceramic mugs. A large wooden drafting table sits near a window, covered in sketches and half-finished watercolor paintings of forest scenes. The room feels lived-in and cozy, with dust motes dancing in the sunlight and a soft, nostalgic atmosphere consistent with a Ghibli-inspired aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDir8J6gtI_hjPrZkKqjgBZPBUlBqzn2764xbJO7lKb4M9e35fj0r1YNLhL1MtLeXY9C2lQTgoZ2JO3abx7-PoB_oXHAz68bdx_y5KzX7C4SLXJhqYrJf-SSvPZcvXDU1sghOXaFbU-fMwowPrH_3Lt1rXqVSSfPXkvDaBOKwtPlH55SKiGlGtVmJ22-KdXaK5dVZUBR_zIrQ6OOqDVpMFOlXIVDnFI6jTbN_Neal_pkiQdwWORJes-Of7-P8P_tmDAR2F2uzgANXtC"/>
+</div>
+<div class="flex-1 min-w-[300px]">
+<img alt="" class="w-full h-64 object-cover rounded-xl watercolor-shadow" data-alt="An artistic arrangement of hand-painted color swatches on textured ivory paper. The swatches represent an environmental palette, ranging from deep oceanic teals to bright spring greens and warm earthy terracottas. Each swatch has a slight feathered edge, showing the artisan hand-painted quality. The lighting is bright and clean, emphasizing the purity and depth of the pigments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6XlFyEqFPUxhvfxCDOblSrNs2YcgcKsOi6dlVJ7X-kbXFclSE8gaNIrub0FE3ugt5LSZdvS4L9ydL2_R_JW7Lx6zr5P8G64btc6NgKkXWXflV5T8qlfG6h54PAF9Xbe8RKM3imW8VX_NhUAd13lNnX2W_OZ0MlsEDlsdD04cJnkBW2wZIyPAOpvCGTqiH46-XYWNPetHpza0Dvt5zTtd6O8SgyZkg8DhcZ44CUFYY_UbyNiDkRydblql-sxt0MY05tNfkSYq3FcV4"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-low dark:bg-surface-container-highest">
+<div class="flex flex-col md:flex-row justify-between items-center gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="text-center md:text-left">
+<span class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed block mb-2">Studio Magic</span>
+<p class="text-body-md font-body-md text-tertiary dark:text-tertiary-fixed-dim">© 2024 Hand-Drawn Tales. Crafted with Ma.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant dark:text-outline-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-all hover:underline underline-offset-4" href="#">Philosophy</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-all hover:underline underline-offset-4" href="#">Studio</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-all hover:underline underline-offset-4" href="#">Archive</a>
+</div>
+</div>
+</footer>
+</body></html>
